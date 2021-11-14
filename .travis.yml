@@ -1,0 +1,14 @@
+arch: amd64
+os: linux
+dist: focal
+
+language: python
+python:
+  - "3.9"
+jobs:
+  include:
+    - stage: free grammar prime generator
+      script:
+        - cd TM_generator/
+        - python prime_generator.py -n 3
+        - cat ./prime_generator_result.txt
